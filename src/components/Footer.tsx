@@ -91,7 +91,13 @@ const Footer = () => {
         <div className="flex lg:flex-row flex-col gap-8 lg:items-center justify-between md:mb-20 mb-10">
           <div className="text-body-md font-light">
             © {new Date().getFullYear()} Inteo - Award winning studio. Made with
-            love
+            love by{" "}
+            <a
+              className="text-primary-600"
+              href="https://github.com/nktech-official/"
+            >
+              NkTech
+            </a>
           </div>
           <div className="flex lg:flex-row flex-col lg:items-center md:gap-6 gap-4">
             <div className="flex flex-row items-center opacity-70">
