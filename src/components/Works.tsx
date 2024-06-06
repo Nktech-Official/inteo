@@ -1,11 +1,15 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import WorkData from "@/data/works.json";
 
 import WorkItem from "./WorkItem";
 import Eyebrow from "./EyeBrow";
 import Button from "./Button";
 
-const Works = () => {
+const Works = ({
+  openModal,
+}: {
+  openModal: MouseEventHandler<HTMLButtonElement>;
+}) => {
   const data = WorkData;
   return (
     <div>
@@ -29,7 +33,7 @@ const Works = () => {
                 />
               ))}
               <div className="xl:flex hidden items-start">
-                <Button label="CONTACT US" link="/" size="lg" />
+                <Button onClick={openModal} label="CONTACT US" size="lg" />
               </div>
             </div>
             <div className="xl:col-span-6 lg:col-span-8 flex flex-col xl:gap-24 md:gap-20 gap-10 xl:px-14">
@@ -44,7 +48,7 @@ const Works = () => {
             </div>
           </div>
           <div className="xl:hidden flex items-start">
-            <Button label="CONTACT US" link="/" size="lg" />
+            <Button onClick={openModal} label="CONTACT US" size="lg" />
           </div>
         </div>
       </div>

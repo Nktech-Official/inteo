@@ -1,18 +1,18 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import PropTypes from "prop-types";
 
 interface ButtonProps {
   label: string;
-  link: string;
   size?: string;
   icon?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
-const Button: React.FC<ButtonProps> = ({ label, link, size, icon }) => (
-  <a
+const Button: React.FC<ButtonProps> = ({ label, size, icon, onClick }) => (
+  <button
+    onClick={onClick}
     className={`button flex gap-1 items-center justify-center bg-primary-600 text-white font-semibold  ${
       size === "lg" ? "px-6 py-4 text-body-sm" : "px-5 py-3 text-body-xs"
     }`}
-    href={link}
   >
     {label}
     {icon === true ? (
@@ -41,7 +41,7 @@ const Button: React.FC<ButtonProps> = ({ label, link, size, icon }) => (
     ) : (
       ""
     )}
-  </a>
+  </button>
 );
 
 export default Button;

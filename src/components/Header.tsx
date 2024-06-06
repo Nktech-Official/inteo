@@ -1,11 +1,15 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import Link from "next/link";
 
 import Logo from "@/assets/logos/logo-dark.svg";
 import Button from "./Button";
 import Image from "next/image";
 
-const Header = () => {
+const Header = ({
+  openModal,
+}: {
+  openModal: MouseEventHandler<HTMLButtonElement>;
+}) => {
   const navigation = [
     { name: "About", href: "#" },
     { name: "Services", href: "#" },
@@ -32,7 +36,7 @@ const Header = () => {
                 </a>
               ))}
             </div>
-            <Button label="CONTACT US" link="#" />
+            <Button onClick={openModal} label="CONTACT US" />
           </div>
         </div>
       </div>
