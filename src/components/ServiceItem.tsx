@@ -18,7 +18,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
       <Image src={icon} width={48} height={48} alt={title} />
       <div className="flex flex-col gap-4">
         <p className="font-display md:text-display-md text-display-sm font-normal">
-          {title}
+          {title}.
         </p>
         <p className="text-body-lg font-light text-neutral-700">
           {description}
