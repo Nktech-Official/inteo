@@ -14,7 +14,7 @@ const About = () => {
             <EyeBrow label="ABOUT US" />
             <h2 className="font-display md:text-display-xl text-display-md font-normal pb-4">
               We help to bring your <span className="italic">dream home</span>{" "}
-              to reality
+              to reality.
             </h2>
             <p className="md:text-body-lg text-body-md font-light text-neutral-700">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
